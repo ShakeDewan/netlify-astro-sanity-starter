@@ -1,4 +1,4 @@
-import { client } from '@utils/sanity-client';
+import { client, isSanityConfigured } from '@utils/sanity-client';
 import { IMAGE } from './blocks';
 
 const CONFIG_QUERY_OBJ = `{
@@ -15,5 +15,9 @@ const CONFIG_QUERY_OBJ = `{
 }`;
 
 export async function fetchData() {
+    if (!isSanityConfigured || !client) {
+        return undefined;
+    }
+
     return await client.fetch(`*[_type == "siteConfig"][0] ${CONFIG_QUERY_OBJ}`);
 }

@@ -15,7 +15,44 @@ interface Props {
 
 const { addTitleSuffix, description, image } = Astro.props;
 
-const configData: SiteConfig = (await fetchData()) || {};
+const fallbackSiteConfig: SiteConfig = {
+    titleSuffix: 'AI Forward',
+    header: {
+        title: '⚡ AI Forward',
+        navLinks: [
+            { _type: 'actionLink', label: 'The Challenge', url: '#challenge' },
+            { _type: 'actionLink', label: 'Our Approach', url: '#approach' },
+            { _type: 'actionLink', label: 'Solutions', url: '#solutions' },
+            { _type: 'actionLink', label: 'Leadership', url: '#leadership' },
+            {
+                _type: 'actionButton',
+                label: 'Schedule Strategic Call',
+                url: '#consultation',
+                theme: 'primary'
+            }
+        ]
+    },
+    footer: {}
+};
+
+let cmsConfig: SiteConfig | undefined;
+try {
+    cmsConfig = await fetchData();
+} catch (error) {
+    cmsConfig = undefined;
+}
+
+const configData: SiteConfig = {
+    ...fallbackSiteConfig,
+    ...cmsConfig,
+    header: {
+        ...cmsConfig?.header,
+        ...fallbackSiteConfig.header,
+        logo: cmsConfig?.header?.logo ?? fallbackSiteConfig.header?.logo
+    },
+    footer: fallbackSiteConfig.footer
+};
+
 const titleSuffix = configData.titleSuffix && addTitleSuffix !== false ? configData.titleSuffix : undefined;
 const title = [Astro.props.title, titleSuffix].filter(Boolean).join(' | ');
 const resolvedImage = image?.src ? { src: new URL(image.src, Astro.site).toString() } : undefined;
@@ -48,7 +85,10 @@ function formatCanonicalURL(url: string | URL) {
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
         <!-- Low Priority Global Metadata -->
         {configData.favicon?.src && <link rel="icon" type="image/svg+xml" href={configData.favicon.src} />}

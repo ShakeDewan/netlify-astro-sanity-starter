@@ -10,13 +10,12 @@ import { fetchData, getPageById } from '@data/page';
 
 export async function getStaticPaths() {
     const data = await fetchData();
-    return data.map((page: Page) => {
-        const slug = page.slug.current === '/' ? undefined : page.slug.current;
-        return {
-            params: { slug },
+    return data
+        .filter((page: Page) => page.slug.current && page.slug.current !== '/')
+        .map((page: Page) => ({
+            params: { slug: page.slug.current },
             props: { id: page._id }
-        };
-    });
+        }));
 }
 
 const { id } = Astro.props;

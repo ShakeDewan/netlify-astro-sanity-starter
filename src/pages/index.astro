@@ -1,0 +1,354 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+const metrics = [
+    {
+        label: 'Time to measurable ROI',
+        value: '90 Days',
+        description: 'From executive alignment to deployed initiatives.'
+    },
+    {
+        label: 'Average first-year return',
+        value: '480%',
+        description: 'Captured through prioritized AI investments.'
+    },
+    {
+        label: 'Average value created',
+        value: '$4.2M',
+        description: 'New revenue, cost savings, and productivity unlocked.'
+    }
+];
+
+const costOfInaction = [
+    {
+        title: 'Market Share Erosion',
+        description:
+            'Competitors using AI are capturing customers faster, serving them better, and pricing more competitively.'
+    },
+    {
+        title: 'Operational Inefficiency',
+        description: 'Your talent is trapped in routine tasks while AI-powered teams focus on strategic growth initiatives.'
+    },
+    {
+        title: 'Decision-Making Delays',
+        description: "While you analyze yesterday's data, AI-enabled leaders are predicting and responding to tomorrow's opportunities."
+    }
+];
+
+const strategicAdvantage = [
+    {
+        title: 'Market Leadership Position',
+        description: 'Accelerate growth with intelligence that anticipates market shifts and customer needs before they emerge.'
+    },
+    {
+        title: 'Operational Excellence',
+        description: 'Transform your team into strategic thinkers while AI handles operational complexity and routine decisions.'
+    },
+    {
+        title: 'Sustainable Competitive Advantage',
+        description: 'Build AI capabilities that compound over time, creating barriers that competitors struggle to overcome.'
+    }
+];
+
+const frameworkSteps = [
+    {
+        number: '01',
+        title: 'Strategic Assessment',
+        description:
+            'Comprehensive analysis of your business model, competitive landscape, and growth objectives to pinpoint the highest-impact AI opportunities.',
+        deliverables: ['Business Process Deep-Dive', 'Competitive Intelligence Report', 'ROI Opportunity Matrix']
+    },
+    {
+        number: '02',
+        title: 'Custom Strategy Blueprint',
+        description:
+            'A prioritized roadmap that clarifies how AI will drive outcomes across your organization, with accountability built in.',
+        deliverables: ['90-Day Implementation Roadmap', 'Technology Architecture Plan', 'Financial Impact Projections']
+    },
+    {
+        number: '03',
+        title: 'Guided Execution',
+        description:
+            'Hands-on partnership with your team to ensure flawless delivery, change management, and continuous optimization.',
+        deliverables: ['Executive Partnership & Support', 'Team Training & Change Management', 'Continuous Performance Optimization']
+    }
+];
+
+const solutions = [
+    {
+        title: 'Revenue Acceleration',
+        description:
+            'Deploy AI-powered market intelligence and customer insights to identify new revenue streams and optimize pricing strategies.',
+        impacts: ['25-40% faster time to market', '15-30% improvement in lifetime value', '20-35% increase in cross-sells']
+    },
+    {
+        title: 'Operational Excellence',
+        description: 'Transform operations with intelligent automation that reduces costs while improving quality and customer experience.',
+        impacts: ['30-50% reduction in cycle times', '40-60% decrease in errors', '20-35% better resource utilization']
+    },
+    {
+        title: 'Strategic Intelligence',
+        description: 'Gain competitive advantage with AI-driven analytics that predict market trends and optimize decision-making.',
+        impacts: ['60-80% better forecast accuracy', '3-6 months faster response to market shifts', '25-45% smarter capital allocation']
+    }
+];
+
+const leaders = [
+    {
+        name: 'Shake Dewan',
+        role: 'Chief Executive Officer',
+        background: 'Former Deloitte Principal and Chief AI Officer guiding enterprise transformations.'
+    },
+    {
+        name: 'Thais Felipelli',
+        role: 'Head of AI Strategy',
+        background: 'Co-Founder of Evino and MIT Sloan MBA focused on outcome-driven innovation.'
+    },
+    {
+        name: 'Alice Wang',
+        role: 'Marketing Director',
+        background: 'Zen Media alum leading go-to-market acceleration and category positioning.'
+    },
+    {
+        name: 'Paul Marz',
+        role: 'Operations Partner',
+        background: 'Former Director of Operations at Disney translating strategy into disciplined execution.'
+    },
+    {
+        name: 'Kevin Lett',
+        role: 'Business Strategy Lead',
+        background: 'Director of Assets at VAALCO Energy with deep expertise in scaling operational excellence.'
+    }
+];
+
+const partnerLogos = ['Deloitte', 'Disney', 'VMWare', 'MIT', 'Zen Media', 'Evino'];
+---
+
+<Layout
+    title="AI Forward | Strategic AI Consulting"
+    description="Strategic AI consulting for executive leaders who demand results. Partner with AI Forward to capture measurable value within 90 days."
+>
+    <main class="bg-base-100 text-base-content">
+        <section id="hero" class="relative isolate overflow-hidden bg-gradient-to-br from-white via-slate-50 to-slate-100 pb-24 pt-28 sm:pb-32">
+            <div class="absolute inset-x-0 -top-32 -z-10 flex justify-center opacity-50">
+                <div class="h-72 w-[28rem] rounded-full bg-primary/20 blur-3xl" />
+            </div>
+            <div class="mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.32em] text-primary/80">Trusted by Fortune 500 Leadership Teams</p>
+                    <h1 class="mt-6 max-w-2xl text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+                        Your Competition Is Already Using AI to Win
+                    </h1>
+                    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+                        While you evaluate options, forward-thinking leaders are already capturing market share, reducing costs by 40%, and
+                        accelerating growth with strategic AI implementation.
+                    </p>
+                    <div class="mt-10 flex flex-wrap items-center gap-4">
+                        <a class="btn btn-primary rounded-full px-8 py-3 text-sm font-semibold tracking-wide shadow-lg shadow-primary/25" href="#consultation">
+                            Get Your Strategic Roadmap
+                        </a>
+                        <a class="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-primary hover:text-primary" href="#approach">
+                            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                ▶
+                            </span>
+                            Watch Our Approach
+                        </a>
+                    </div>
+                    <div class="mt-14 grid gap-6 sm:grid-cols-3">
+                        {metrics.map((metric) => (
+                            <div class="rounded-3xl border border-white/60 bg-white/80 p-6 shadow-md shadow-primary/5 backdrop-blur">
+                                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{metric.label}</p>
+                                <p class="mt-4 text-3xl font-semibold text-slate-900">{metric.value}</p>
+                                <p class="mt-3 text-sm text-slate-600">{metric.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-primary/10 via-white to-primary/5 blur-2xl" />
+                    <div class="relative overflow-hidden rounded-[2rem] border border-slate-200/70 bg-white/90 p-10 shadow-2xl shadow-primary/10 backdrop-blur">
+                        <div class="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+                            Boardroom Briefing
+                        </div>
+                        <h2 class="mt-6 text-2xl font-semibold text-slate-900">AI decisions demand executive precision</h2>
+                        <p class="mt-4 text-base leading-relaxed text-slate-600">
+                            Navigating hype, risk, and complexity is the mandate. We translate AI into strategic advantage with a leadership-first approach that aligns every initiative to measurable value.
+                        </p>
+                        <div class="mt-8 space-y-5">
+                            <div class="rounded-2xl border border-slate-200/80 bg-white/70 p-5">
+                                <p class="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Our Approach</p>
+                                <p class="mt-2 text-base text-slate-700">
+                                    Strategy before tooling. We partner with your executives to identify, prioritize, and operationalize AI use cases that move the enterprise needle.
+                                </p>
+                            </div>
+                            <div class="rounded-2xl border border-slate-200/80 bg-white/70 p-5">
+                                <p class="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Schedule Strategic Call</p>
+                                <p class="mt-2 text-base text-slate-700">
+                                    Align stakeholders in a complimentary 45-minute session. Expect a clear-eyed view of your AI readiness and the roadmap to accelerate advantage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto mt-20 max-w-7xl px-4 sm:px-6">
+                <p class="text-xs font-semibold uppercase tracking-[0.32em] text-slate-500">Our leadership team has delivered results at</p>
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    {partnerLogos.map((logo) => (
+                        <span class="rounded-full border border-slate-200 bg-white px-5 py-2 text-sm font-medium text-slate-600 shadow-sm">
+                            {logo}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="challenge" class="bg-white py-24 sm:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+                <div class="grid gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.32em] text-primary/80">The Strategic Challenge</p>
+                        <h2 class="mt-4 max-w-2xl text-4xl font-semibold text-slate-900 sm:text-5xl">
+                            Every leader knows AI is transformative—few have the clarity to execute without risking the enterprise.
+                        </h2>
+                        <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+                            You see competitors gaining ground, but the noise, hype, and fear of missteps can stall even the most decisive teams. The cost of getting it wrong is enormous. The cost of waiting is even higher.
+                        </p>
+                        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+                            The question is not whether to adopt AI—it is how quickly you can do it strategically. We guide executive teams through that decision with rigor, transparency, and measurable outcomes.
+                        </p>
+                        <a class="mt-10 inline-flex items-center gap-3 text-sm font-semibold text-primary transition hover:translate-x-1" href="#consultation">
+                            Begin Your Strategic Assessment
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="rounded-[2rem] border border-slate-200/80 bg-slate-50/80 p-8 shadow-sm">
+                            <h3 class="text-lg font-semibold text-slate-900">The Cost of Inaction</h3>
+                            <div class="mt-6 space-y-5">
+                                {costOfInaction.map((item) => (
+                                    <div>
+                                        <p class="font-semibold text-slate-800">{item.title}</p>
+                                        <p class="mt-1 text-sm text-slate-600">{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div class="rounded-[2rem] border border-primary/30 bg-primary/5 p-8 shadow-sm">
+                            <h3 class="text-lg font-semibold text-slate-900">The Strategic Advantage</h3>
+                            <div class="mt-6 space-y-5">
+                                {strategicAdvantage.map((item) => (
+                                    <div>
+                                        <p class="font-semibold text-slate-800">{item.title}</p>
+                                        <p class="mt-1 text-sm text-slate-600">{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="bg-slate-50 py-24 sm:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-primary/80">Our Approach</p>
+                <div class="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <h2 class="max-w-3xl text-4xl font-semibold text-slate-900 sm:text-5xl">Our Proven Strategic Framework</h2>
+                    <p class="max-w-xl text-base text-slate-600">
+                        We distilled decades of experience with Fortune 500 enterprises into a clear, executive-ready process. Expect momentum within 90 days and the clarity to scale responsibly.
+                    </p>
+                </div>
+                <div class="mt-16 grid gap-8 lg:grid-cols-3">
+                    {frameworkSteps.map((step) => (
+                        <div class="relative flex h-full flex-col rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-primary/5">
+                            <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">{step.number}</span>
+                            <h3 class="mt-6 text-2xl font-semibold text-slate-900">{step.title}</h3>
+                            <p class="mt-4 flex-1 text-base leading-relaxed text-slate-600">{step.description}</p>
+                            <ul class="mt-6 space-y-3 text-sm text-slate-600">
+                                {step.deliverables.map((item) => (
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-xs text-primary">✓</span>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="bg-white py-24 sm:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-primary/80">Strategic AI Solutions</p>
+                <div class="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <h2 class="max-w-3xl text-4xl font-semibold text-slate-900 sm:text-5xl">Executive-ready programs engineered for measurable impact.</h2>
+                    <p class="max-w-xl text-base text-slate-600">
+                        Each engagement is bespoke, but the outcomes are consistent: accelerated revenue, disciplined operations, and intelligence that compounds over time.
+                    </p>
+                </div>
+                <div class="mt-16 grid gap-8 lg:grid-cols-3">
+                    {solutions.map((solution) => (
+                        <div class="flex h-full flex-col rounded-[2rem] border border-slate-200/70 bg-slate-50/60 p-8 shadow-sm">
+                            <h3 class="text-2xl font-semibold text-slate-900">{solution.title}</h3>
+                            <p class="mt-4 flex-1 text-base text-slate-600">{solution.description}</p>
+                            <div class="mt-6 space-y-3 text-sm text-slate-600">
+                                {solution.impacts.map((impact) => (
+                                    <div class="flex items-start gap-3">
+                                        <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-xs text-primary">↑</span>
+                                        <span>{impact}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="bg-slate-50 py-24 sm:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-primary/80">Leadership</p>
+                <div class="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <h2 class="max-w-3xl text-4xl font-semibold text-slate-900 sm:text-5xl">Executive Leadership Team</h2>
+                    <p class="max-w-xl text-base text-slate-600">
+                        Decades of combined experience across consulting, operations, marketing, and innovation. We sit shoulder-to-shoulder with your leadership team to deliver results.
+                    </p>
+                </div>
+                <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {leaders.map((leader) => (
+                        <div class="flex h-full flex-col rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-primary/5">
+                            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">{leader.role}</p>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-900">{leader.name}</h3>
+                            <p class="mt-3 text-sm text-slate-600">{leader.background}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="consultation" class="relative isolate overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-slate-900 py-24 text-white">
+            <div class="absolute inset-x-0 -top-32 -z-10 flex justify-center opacity-40">
+                <div class="h-80 w-[28rem] rounded-full bg-white/20 blur-3xl" />
+            </div>
+            <div class="mx-auto max-w-5xl px-4 text-center sm:px-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-white/70">Your AI Strategy Starts Here</p>
+                <h2 class="mt-6 text-4xl font-semibold leading-tight sm:text-5xl">Schedule a Strategic Consultation</h2>
+                <p class="mt-6 text-lg leading-relaxed text-white/80">
+                    Meet with our executive team for a complimentary 45-minute assessment. You will leave with a clear diagnosis of your AI readiness, the highest-value opportunities, and a tailored roadmap for execution.
+                </p>
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+                    <a class="btn btn-primary border-none bg-white text-primary hover:bg-white/90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-primary" href="mailto:contact@aiforward.ca">
+                        Reserve Your Consultation
+                    </a>
+                    <a class="inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-white" href="tel:+14379614590">
+                        Or call (437) 961-4590
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+                <p class="mt-6 text-sm font-medium uppercase tracking-[0.3em] text-white/60">Complimentary • 45 Minutes • No Obligation</p>
+            </div>
+        </section>
+    </main>
+</Layout>
