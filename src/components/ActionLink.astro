@@ -11,11 +11,11 @@ const { label, ariaLabel, url, class: className, 'data-sb-field-path': fieldPath
 
 {
     url ? (
-        <a class:list={['text-neutral', className]} href={url} aria-label={ariaLabel} data-sb-field-path={fieldPath}>
+        <a class:list={['text-slate-700 transition hover:text-primary', className]} href={url} aria-label={ariaLabel} data-sb-field-path={fieldPath}>
             <span data-sb-field-path={fieldPath ? '.label' : undefined}>{label}</span>
         </a>
     ) : (
-        <button class:list={['text-neutral', className]} aria-label={ariaLabel} data-sb-field-path={fieldPath}>
+        <button class:list={['text-slate-700 transition hover:text-primary', className]} aria-label={ariaLabel} data-sb-field-path={fieldPath}>
             <span data-sb-field-path={fieldPath ? '.label' : undefined}>{label}</span>
         </button>
     )
