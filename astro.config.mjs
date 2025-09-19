@@ -3,12 +3,18 @@ import tailwindcss from '@tailwindcss/vite';
 import sanity from '@sanity/astro';
 import { sanityConfig } from './src/utils/sanity-client';
 
+const integrations = [];
+
+if (sanityConfig) {
+    integrations.push(sanity(sanityConfig));
+}
+
 // https://astro.build/config
 export default defineConfig({
     image: {
         domains: ['cdn.sanity.io']
     },
-    integrations: [sanity(sanityConfig)],
+    integrations,
     vite: {
         plugins: [tailwindcss()],
         server: {
